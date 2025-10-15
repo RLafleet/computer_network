@@ -1,0 +1,38 @@
+# CMake build folders
+/build/
+HighLoadServer/build/
+HighLoadServerC/build/
+
+# VS/MSBuild outputs
+**/Debug/
+**/Release/
+**/x64/
+**/*.tlog
+**/*.recipe
+**/*.lastbuildstate
+**/*.vcxproj.user
+
+# Binaries
+**/*.exe
+**/*.dll
+**/*.pdb
+**/*.lib
+**/*.obj
+
+# CMake cache and files
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Misc
+.DS_Store
+Thumbs.db
