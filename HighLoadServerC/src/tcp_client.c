@@ -8,13 +8,8 @@ int tcp_client_create(TcpClient *c)
     if (!c)
         return -1;
     c->sock = (socket_handle)socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-#ifdef _WIN32
     if (c->sock == INVALID_SOCKET)
         return -1;
-#else
-    if (c->sock < 0)
-        return -1;
-#endif
     printf("Client socket created\n");
     return 0;
 }
@@ -60,11 +55,7 @@ void tcp_client_close(TcpClient *c)
 {
     if (!c)
         return;
-#ifdef _WIN32
     if (c->sock != INVALID_SOCKET)
-#else
-    if (c->sock >= 0)
-#endif
     {
         socket_close(c->sock);
         printf("Connection closed\n");

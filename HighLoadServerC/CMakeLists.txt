@@ -18,7 +18,6 @@ add_executable(${PROJECT_NAME}
         src/tcp_client.h
 )
 
-if (WIN32)
-    target_link_libraries(${PROJECT_NAME} ws2_32)
-endif()
+
+target_link_libraries(${PROJECT_NAME} ws2_32)
 
