@@ -8,6 +8,7 @@ int run_client(const char *ip, unsigned short port, const char *name)
     TcpClient c;
     if (tcp_client_create(&c) != 0)
         return -1;
+
     if (tcp_client_connect(&c, ip, port) != 0)
         return -1;
 
@@ -25,6 +26,7 @@ int run_client(const char *ip, unsigned short port, const char *name)
     int w = construct_query(&q, out, sizeof(out));
     if (w <= 0)
         return -1;
+
     if (tcp_client_send(&c, out, (size_t)w) != 0)
         return -1;
 
@@ -36,6 +38,7 @@ int run_client(const char *ip, unsigned short port, const char *name)
     Query resp;
     if (parse_query(in, (size_t)r, &resp) != 0)
         return -1;
+
     print_info(name, resp.name, number, resp.number);
     return 0;
 }
