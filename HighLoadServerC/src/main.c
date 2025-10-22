@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     Args args;
     if (!parse_args(argc, argv, &args))
     {
-        printf("Usage\n  Server mode: HighLoadServerC <port> <name>\n\n  Client mode: HighLoadServerC <address> <port> <name>\n\n");
+        printf("Server mode: HighLoadServerC <port> <name>\n\n  Client mode: HighLoadServerC <address> <port> <name>\n\n");
         return EXIT_FAILURE;
     }
 
