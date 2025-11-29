@@ -1,0 +1,3 @@
+C:/Projects/computer_network/lab2/build/CMakeFiles/WebServerLab2.dir
+C:/Projects/computer_network/lab2/build/CMakeFiles/ALL_BUILD.dir
+C:/Projects/computer_network/lab2/build/CMakeFiles/ZERO_CHECK.dir

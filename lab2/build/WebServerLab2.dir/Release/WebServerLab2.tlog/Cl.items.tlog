@@ -1,0 +1,7 @@
+C:\Projects\computer_network\lab2\src\main.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\main.obj
+C:\Projects\computer_network\lab2\src\http_server.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\http_server.obj
+C:\Projects\computer_network\lab2\src\http_parser.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\http_parser.obj
+C:\Projects\computer_network\lab2\src\file_handler.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\file_handler.obj
+C:\Projects\computer_network\lab2\src\mime_types.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\mime_types.obj
+C:\Projects\computer_network\lab2\src\socket.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\socket.obj
+C:\Projects\computer_network\lab2\src\thread_pool.c;C:\Projects\computer_network\lab2\build\WebServerLab2.dir\Release\thread_pool.obj
