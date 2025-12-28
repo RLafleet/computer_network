@@ -11,8 +11,8 @@ make
 Отправитель:
 
 ```bash
-./rdt_sender -alg GBN -d -loss 10 -delay 50 -w 5 receiver_host 8080 file.txt
-./rdt_sender -alg SR -d -loss 5 -delay 20 -w 8 receiver_host 8080 file.txt
+./rdt_sender -alg GBN -d -loss 10 -delay 50 -w 5 127.0.0.1 8080 file.txt
+./rdt_sender -alg SR -d -loss 5 -delay 20 -w 8 127.0.0.1 8080 file.txt
 ```
 
 Получатель:
@@ -38,9 +38,3 @@ make
 
 - RTT лог: `seq rtt_ms srtt_ms rto_ms`
 - CWND лог: `timestamp_ms cwnd ssthresh event`
-
-## Замечания
-
-- Все сообщения и логи выводятся на русском языке.
-- Протокол использует UDP и встроенную симуляцию потерь/задержек.
-- Передача начинается с пакета `SYN` (размер файла), завершается `FIN`.

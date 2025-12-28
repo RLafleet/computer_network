@@ -1,0 +1,6 @@
+[отправка] seq=0 flags=SYN len=8
+[отправка] seq=1 flags=DATA len=7
+[отправка] seq=2 flags=FIN len=0
+[ACK] cumul=1
+[ACK] cumul=3
+Передача завершена. Отправлено: 7 байт, ретрансляции: 0, сим.потери: 0

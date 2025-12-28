@@ -24,20 +24,8 @@ make
 - HTTP Proxy: `localhost`
 - Порт: `8888`
 
-### Прямой запрос через URL
-
-```
-http://localhost:8888/http://www.example.com/
-```
-
 ### Пример через curl
 
 ```bash
 curl -v -x http://localhost:8888 http://www.example.com/
 ```
-
-## Примечания
-
-- Поддерживаются методы `GET` и `POST`.
-- Ответы на `POST` не кэшируются.
-- HTTPS не поддерживается.
