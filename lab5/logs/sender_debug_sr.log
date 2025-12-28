@@ -1,0 +1,14 @@
+[отправка] seq=0 flags=SYN len=8
+[отправка] seq=1 flags=DATA len=1024
+[отправка] seq=2 flags=DATA len=1024
+[ACK] seq=0
+[ACK] seq=2
+[дубликат ACK] 2
+[таймаут SR] seq=1
+[отправка] seq=1 flags=DATA len=1024
+[ACK] seq=1
+[отправка] seq=3 flags=DATA len=1024
+[отправка] seq=4 flags=FIN len=0
+[ACK] seq=3
+[ACK] seq=4
+Передача завершена. Отправлено: 3072 байт, ретрансляции: 1, сим.потери: 0

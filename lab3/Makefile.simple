@@ -1,0 +1,26 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -O2
+TARGET = smtp_client
+SRCS = smtp_client.c smtp_utils.c mime_utils.c tls_utils.c
+
+# Without OpenSSL support
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
+
+# With OpenSSL support (requires libssl-dev)
+openssl: CFLAGS += -DUSE_OPENSSL
+openssl: LIBS = -lssl -lcrypto
+openssl: $(TARGET)
+
+$(openssl): $(SRCS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS) $(LIBS)
+
+debug: CFLAGS += -DDEBUG -g
+debug: $(TARGET)
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: all openssl debug clean

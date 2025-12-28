@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -O2 -DUSE_OPENSSL
+TARGET = smtp_client
+SRCS = smtp_client.c smtp_utils.c mime_utils.c tls_utils.c
+LIBS = -lssl -lcrypto
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+    $(CC) $(CFLAGS) -o $(TARGET) $(SRCS) $(LIBS)
+
+clean:
+    rm -f $(TARGET)
+
+.PHONY: all clean
